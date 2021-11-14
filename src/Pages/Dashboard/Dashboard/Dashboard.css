@@ -24,9 +24,7 @@
 }
 
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-   /* Increased text to enable scrolling */
-   /* font-size: 28px; */
+  margin-left: 160px; 
   padding: 0px 10px;
 }
 

@@ -40,11 +40,11 @@ const ManageProducts = () => {
                 <div className='my-4 text-center'>
 
                 </div>
-                <Row xs={1} md={2} lg={3} className='g-4 my-4'>
+                <Row xs={1} md={2} lg={3} className='g-4 py-4'>
                     {
                         moreProducts.map(product => <Col key={product._id}>
                             <Card>
-                                <Card.Img className='img-fluid' variant="top h-100" src={product.img} />
+                                <Card.Img className='img-fluid' variant="top" style={{height:"275px"}} src={product.img} />
                                 <Card.Body>
                                     <Card.Title className='my-2'>{product.name}</Card.Title>
                                     <Card.Text className='text-secondary'>

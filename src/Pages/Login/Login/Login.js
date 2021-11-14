@@ -4,6 +4,7 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
+import './Login.css'
 
 const Login = () => {
 
@@ -21,7 +22,7 @@ const Login = () => {
     return (
         <div>
             <Header></Header>
-            <div className='my-4 text-center p-4 my-5'>
+            <div id="formation" className='my-4 text-center p-4 my-5'>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <input {...register("email")}
@@ -38,7 +39,7 @@ const Login = () => {
                         required
                     /> <br />
 
-                    <input className="btn btn-danger p-2 m-2 w-25" type="submit" value="Login" /> <br />
+                    <input className="btn btn-primary p-2 m-2" type="submit" value="Login" /> <br />
 
                     <NavLink
                         style={{ textDecoration: "none" }}

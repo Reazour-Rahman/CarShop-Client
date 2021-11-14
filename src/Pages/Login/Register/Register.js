@@ -19,7 +19,7 @@ const Register = () => {
     return (
         <div>
             <Header></Header>
-            <div className='my-4 text-center p-4'>
+            <div id="formation" className='my-4 text-center p-4'>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <input {...register("name")}
@@ -42,7 +42,7 @@ const Register = () => {
                         required
                     /> <br />
 
-                    <input className="btn btn-danger p-2 m-1 w-25" type="submit" value="Register" /> <br />
+                    <input className="btn btn-primary p-2 m-1" type="submit" value="Register" /> <br />
 
                     <NavLink
                         style={{ textDecoration: "none" }}

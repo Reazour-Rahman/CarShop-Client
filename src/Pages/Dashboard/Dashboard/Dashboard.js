@@ -23,7 +23,7 @@ const Dashboard = () => {
     const { path, url } = useRouteMatch();
 
     return (
-        <div>
+        <div className="bg-white">
             <div className="sidenav">
                 {/* dashboard portion */}
                 <Link to={`${url}`}><p className='text-primary fw-bolder'>Dashboard</p></Link>
