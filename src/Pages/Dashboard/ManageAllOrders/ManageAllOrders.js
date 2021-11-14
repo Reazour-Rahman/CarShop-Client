@@ -71,7 +71,8 @@ const ManageAllOrders = () => {
                                     <h6 className="card-text"> Order: <strong>{order.status}</strong></h6>
                                     <div className='d-flex  justify-content-between'>
                                         <button onClick={() => handleDeleteOrder(order._id)} className='btn btn-danger'>Cancel</button>
-                                        <button onClick={() => handleStatus(order._id)} className='btn btn-success'>Approve</button>
+                                        {order.status == "pending" ?<button onClick={() => handleStatus(order._id)} className='btn btn-success'>Approve</button>:
+                                        <button onClick={() => handleStatus(order._id)} className='btn btn-primary'>Approved</button>}
                                     </div>
                                 </div>
                             </div>
