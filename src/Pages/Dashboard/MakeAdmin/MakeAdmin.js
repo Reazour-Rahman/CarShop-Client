@@ -7,7 +7,7 @@ const MakeAdmin = () => {
     // admin create using put operation
     const onSubmit = data => {
         //console.log(data)
-        fetch('http://localhost:5000/admin', {
+        fetch('https://pure-gorge-40152.herokuapp.com/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

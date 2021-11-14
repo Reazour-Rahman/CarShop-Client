@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [deleted, setDeleted] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://pure-gorge-40152.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setMoreProducts(data))
     }, [deleted])
@@ -18,7 +18,7 @@ const ManageProducts = () => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Are you confirm to delete this item?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`
+            const url = `https://pure-gorge-40152.herokuapp.com/products/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

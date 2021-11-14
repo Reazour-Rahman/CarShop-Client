@@ -11,7 +11,7 @@ const Reviews = () => {
 
     /* post req send to server */
     const onSubmit = data => {
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://pure-gorge-40152.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added successfully")

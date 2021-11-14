@@ -11,7 +11,7 @@ const Explore = () => {
     const [moreProducts, setMoreProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://pure-gorge-40152.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setMoreProducts(data))
     }, [])

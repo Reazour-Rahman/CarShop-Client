@@ -8,7 +8,7 @@ const AddProduct = () => {
     /* take input and send to server */
     const onSubmit = data => {
         //console.log(data)
-        axios.post('http://localhost:5000/products', data)
+        axios.post('https://pure-gorge-40152.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added successfully")

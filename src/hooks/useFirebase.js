@@ -82,13 +82,13 @@ const useFirebase = () => {
     // save user to database
     const saveUser = (email, displayName) => {
         const user = { email, displayName }
-        axios.post('http://localhost:5000/users', user)
+        axios.post('https://pure-gorge-40152.herokuapp.com/users', user)
             .then()
     }
 
     // admin check
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://pure-gorge-40152.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

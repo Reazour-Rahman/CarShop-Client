@@ -10,7 +10,7 @@ const Products = () => {
 
     useEffect(() => {
         setLoader(true)
-        fetch('http://localhost:5000/products')
+        fetch('https://pure-gorge-40152.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
             .finally(() => setLoader(false))

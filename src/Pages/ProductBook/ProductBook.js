@@ -16,7 +16,7 @@ const ProductBook = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://pure-gorge-40152.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -25,7 +25,7 @@ const ProductBook = () => {
 
     /* post req send to server */
     const onSubmit = data => {
-        axios.post('http://localhost:5000/orders', data, data.status = 'pending')
+        axios.post('https://pure-gorge-40152.herokuapp.com/orders', data, data.status = 'pending')
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added successfully")
