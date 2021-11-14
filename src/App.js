@@ -15,13 +15,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    // All routes
-    <div>
+    <div className="App">
       <AuthProvider>
         <BrowserRouter>
 
           <Switch>
-
+          {/* Routes */}
             <Route exact path='/'>
               <Home></Home>
             </Route>
@@ -29,14 +28,6 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
-
-            <PrivateRoute path='/explore'>
-              <Explore></Explore>
-            </PrivateRoute>
-
-            <PrivateRoute path='/product/:id'>
-              <ProductBook></ProductBook>
-            </PrivateRoute>
 
             <Route path='/register'>
               <Register></Register>
@@ -48,6 +39,14 @@ function App() {
 
             <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
+            </PrivateRoute>
+
+            <PrivateRoute path='/explore'>
+              <Explore></Explore>
+            </PrivateRoute>
+
+            <PrivateRoute path='/product/:id'>
+              <ProductBook></ProductBook>
             </PrivateRoute>
 
             <Route path='*'>

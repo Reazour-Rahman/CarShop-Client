@@ -2,12 +2,11 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
-    // footer section
     return (
         <div>
             <footer>
                 <div>
-                        <span class="logo">iTechnology</span>
+                        <span class="logo">CarShop</span>
                 </div>
 
                 <div class="row">
@@ -17,9 +16,9 @@ const Footer = () => {
                                 <span class="footer-cat">Solution</span>
                             </div>
                             <ul class="footer-cat-links">
-                                <li><a href="##"><span>Tourism and Hospitality</span></a></li>
-                                <li><a href="##"><span>Secure the tourists</span></a></li>
-                                <li><a href="##"><span>Provide better location</span></a></li>
+                                <li><a href="##"><span>Repair Cars and Sell</span></a></li>
+                                <li><a href="##"><span>Secure the Car</span></a></li>
+                                <li><a href="##"><span>Provide better Solution</span></a></li>
                             </ul>
                         </div>
                         <div class="col-3">
@@ -28,11 +27,11 @@ const Footer = () => {
                                 <span class="footer-cat">Industries</span>
                             </div>
                             <ul class="footer-cat-links">
-                                <li><a href="##"><span>Hotel</span></a></li>
                                 <li><a href="##"><span>Sports</span></a></li>
-                                <li><a href="##"><span>Accommodation</span></a></li>
-                                <li><a href="##"><span>Food service</span></a></li>
-                                <li><a href="##"><span>Group tour</span></a></li>
+                                <li><a href="##"><span>MAnual</span></a></li>
+                                <li><a href="##"><span>Family</span></a></li>
+                                <li><a href="##"><span>Officials</span></a></li>
+                                <li><a href="##"><span>Decent</span></a></li>
                             </ul>
                         </div>
                         <div class="col-3">

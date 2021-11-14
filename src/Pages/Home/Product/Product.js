@@ -18,11 +18,12 @@ const Product = (props) => {
                             {description.slice(0, 98)}
                         </Card.Text>
 
-                        <div className="d-flex justify-content-between">
+                        <div className="d-flex justify-content-between align-items-center">
+                        <p className='p-2 fw-bold'><i className="fas fa-dollar-sign"></i>{price}</p>
                             <Link to={url}>
-                                <Button className="my-2" variant="outline-danger">Buy Now</Button>
+                                <Button className="my-2" variant="outline-primary">Purchase</Button>
                             </Link>
-                            <h4 className='p-2 fw-bold'><i className="fas fa-dollar-sign"></i>{price}</h4>
+                            
                         </div>
 
                     </Card.Body>

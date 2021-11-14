@@ -16,15 +16,27 @@ const Explore = () => {
             .then(data => setMoreProducts(data))
     }, [])
 
-    // all of the products show here
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div>
             <Header></Header>
             <Container className='my-3'>
-                <div className='my-4 text-center'>
-                    <h2 className='fw-bold'>More SUV Collections</h2>
+                <div className='my-4 text-start'>
+                    <h2 className='fw-bold text-white'>Trending Cars near you</h2>
                 </div>
-                <Row xs={1} md={2} lg={3} className='g-4 my-4'>
+                <Row xs={1} md={2} lg={3} xl={4} className='g-4 my-4'>
                     {
                         moreProducts.map(product => <Col key={product._id} >
                             <Card>

@@ -22,8 +22,8 @@ const Products = () => {
         <div className='my-5'>
             <Container>
                 {/* products part title and data mapping */}
-                <div className='my-4 text-center'>
-                    <h2 className='fw-bold'>Best SUVs according to our experts</h2>
+                <div className='my-4 text-start pb-3 pt-5'>
+                    <h2 className='fw-bold text-white'>The latest new car releases</h2>
                 </div>
 
                 {loader &&
@@ -32,7 +32,7 @@ const Products = () => {
                     </div>
                 }
 
-                <Row xs={1} md={2} lg={3} className='g-4'>
+                <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
                     {
                         products.slice(0, 6).map(product => <Product
                             key={product._id}
