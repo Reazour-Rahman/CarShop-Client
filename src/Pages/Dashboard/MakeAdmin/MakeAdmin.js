@@ -27,13 +27,13 @@ const MakeAdmin = () => {
         <div className='main d-flex justify-content-center align-items-center pt-5'>
             <div>
                 <h3 className='text-primary text-center fw-bolder'>Make Co-Admin</h3>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} className="d-flex justify-content-center flex-column align-items-center">
 
                     <input  {...register("email")}
                         placeholder="Email"
-                        className='px-3 p-1 m-1 w-75'/>
+                        className='px-3 p-1 m-1 w-100'/>
                     <br />
-                    <input type="submit" className='btn btn-success w-75' />
+                    <input type="submit" className='btn btn-primary w-100 rounded-0' value="Add" />
                 </form>
             </div>
         </div>

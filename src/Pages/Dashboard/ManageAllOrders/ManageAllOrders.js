@@ -59,20 +59,21 @@ const ManageAllOrders = () => {
     return (
         <div className='main'>
             <div className='container my-4'>
-                <div className='row row-cols-1 row-cols-md-3 row-cols-lg-3 g-2'>
+                <div className='row row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 g-2'>
                     {
                         orders?.map(order => <div key={order._id} className='col'>
                             <div className="card" style={{ width: "18rem" }}>
-                                <div className="card-body">
-                                    <h5 className="card-title">Booked by: {order.name}</h5>
+                                <div className="card-body bg-light border border-primary">
+                                    <h5 className="card-title">Ordered: {order.name}</h5>
                                     <h6 className="card-title"><strong>Email:</strong> {order.email}</h6>
+                                    
+                                    <h6 className="card-text"> Mobile: {order.phone}</h6>
                                     <h6 className="card-title">Car: {order.product}</h6>
-                                    <h6 className="card-text"> Contact: {order.phone}</h6>
-                                    <h6 className="card-text"> Order: <strong>{order.status}</strong></h6>
+                                    <h6 className="card-text"> Status: <strong>{order.status}</strong></h6>
                                     <div className='d-flex  justify-content-between'>
-                                        <button onClick={() => handleDeleteOrder(order._id)} className='btn btn-danger'>Cancel</button>
-                                        {order.status == "pending" ?<button onClick={() => handleStatus(order._id)} className='btn btn-success'>Approve</button>:
-                                        <button onClick={() => handleStatus(order._id)} className='btn btn-primary'>Approved</button>}
+                                        <button onClick={() => handleDeleteOrder(order._id)} className='btn btn-warning rounded-0 text-white'>Cancel</button>
+                                        {order.status == "pending" ?<button onClick={() => handleStatus(order._id)} className='btn btn-success rounded-0 text-white'>Approve</button>:
+                                        <button onClick={() => handleStatus(order._id)} className='btn btn-primary rounded-0 text-white'>Approved</button>}
                                     </div>
                                 </div>
                             </div>

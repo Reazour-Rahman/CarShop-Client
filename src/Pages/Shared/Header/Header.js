@@ -22,7 +22,7 @@ const Header = () => {
                             user?.email ? <div>
                                 <NavLink activeStyle={activeStyle} className='mx-2 text-decoration-none' to="/dashboard">CONTROL-PANEL</NavLink>
 
-                                <NavLink to="/"><button onClick={logout} className="btn btn-danger mx-2">LOG OUT</button></NavLink>
+                                <NavLink to="/"><button onClick={logout} className="btn btn-warning rounded-0 mx-2">LOG OUT</button></NavLink>
                             </div>
                                 :
                                 <NavLink activeStyle={activeStyle} className='mx-2 text-decoration-none' to="/login">LOGIN</NavLink>

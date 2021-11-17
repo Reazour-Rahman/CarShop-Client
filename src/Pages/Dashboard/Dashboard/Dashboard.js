@@ -25,28 +25,27 @@ const Dashboard = () => {
     return (
         <div className="bg-white">
             <div className="sidenav">
-                {/* dashboard portion */}
                 <Link to={`${url}`}><p className='text-primary fw-bolder'>Dashboard</p></Link>
 
-                { // admin can control
+                { 
                     admin ? <div>
-                        <Link to={`${url}/makeAdmin`}><i className="fas fa-user-shield text-white"></i><small> Make Admin</small></Link>
-                        <Link to={`${url}/addProduct`}><i class="fas fa-plus-circle text-white fs-6"></i><small> Add a product</small></Link>
-                        <Link to={`${url}/manageProducts`}><i class="fas fa-tasks text-white fs-6"></i><small> Manage products</small></Link>
-                        <Link to={`${url}/manageAllOrders`}><i class="fas fa-tasks text-white fs-6"></i><small> Manage All Orders</small></Link>
+                        <Link to={`${url}/makeAdmin`}><small> MAKE ADMIN</small></Link>
+                        <Link to={`${url}/addProduct`}><small>POST SINGLE PRODUCT</small></Link>
+                        <Link to={`${url}/manageProducts`}><small>MANAGE PRODUCTS</small></Link>
+                        <Link to={`${url}/manageAllOrders`}><small>MANAGE ORDERS</small></Link>
                     </div>
 
                         : <div>
-                            {/* user can control */}
-                            <Link to={`${url}/myorders`}><i className="fas fa-cart-arrow-down text-white"></i> My Orders</Link>
-                            <Link to={`${url}/review`}><i className="fas fa-comment-dots text-white"></i> Add Review</Link>
-                            <Link to={`${url}/pay`}><i className="fas fa-money-bill-alt text-white"></i> Payment</Link>
-                            <Link to='/'><i className="fas fa-home text-white"></i> Home</Link>
+                           
+                            <Link to={`${url}/myorders`}> My Orders</Link>
+                            <Link to={`${url}/pay`}>Payment</Link>
+                            <Link to={`${url}/review`}> Add Review</Link>
+                            <Link to='/'> Home</Link>
                         </div>
                 }
-                {/* logout button */}
+              
                 {
-                    user.email && <NavLink to="/"><button onClick={logout} className="btn btn-danger mt-5"><i className="fas fa-sign-out-alt"></i>Log out</button></NavLink>
+                    user.email && <NavLink to="/"><button onClick={logout} className="btn-outline-primary rounded-0 mt-5">Log out</button></NavLink>
                 }
 
             </div>

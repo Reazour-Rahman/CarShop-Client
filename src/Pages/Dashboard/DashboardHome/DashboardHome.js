@@ -1,11 +1,9 @@
 import React from 'react';
-import image from '../../../images/welcome.jpg'
 
 const DashboardHome = () => {
     return (
-        // welcome page
-        <div className='d-flex justify-content-center align-items-center main'>
-            <img style={{}} className="w-50" src={image} alt="" />
+        <div >
+            <h1 className="text-dark d-flex justify-content-center">This is Dashboard</h1>
         </div>
     );
 };

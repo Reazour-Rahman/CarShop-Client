@@ -8,7 +8,11 @@ const PrivateRoute = ({ children, ...rest }) => {
     // loader for not logout on reload
     if (isLoading) {
         return <div className='text-center'>
-            <div className="spinner-grow" role="status"><span className="visually-hidden">Loading...</span></div>
+            <div class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
         </div>
     }
     // private route

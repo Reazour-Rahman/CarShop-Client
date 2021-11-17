@@ -23,7 +23,7 @@ const ProductBook = () => {
 
     const { register, handleSubmit, reset } = useForm();
 
-    /* post req send to server */
+    /* send to server order */
     const onSubmit = data => {
         axios.post('https://pure-gorge-40152.herokuapp.com/orders', data, data.status = 'pending')
             .then(res => {
@@ -33,56 +33,56 @@ const ProductBook = () => {
                 }
             })
     };
-    // product book form and details show about product
+
     return (
         <div>
             <Header></Header>
-            <div className='row row-cols-1 row-cols-md-2 row-cols-lg-2 g-2'>
+            <h2 className='text-center text-white my-3 fw-bolder'>Please Fill Up The Form</h2>
+            <div className='row row-cols-1 row-cols-md-2 row-cols-lg-2 g-2 d-flex align-items-center flex-column'>
                 <div className='col'>
-                    <h2 className='text-center my-3 fw-bolder'>Your Car Order here</h2>
-                    <div className='text-center my-4 mx-auto p-4 border custom-width'>
+                    <div className='text-center my-4 mx-auto'>
                         {products.map(product => product._id == id ?
                             <form key={product._id} onSubmit={handleSubmit(onSubmit)}>
 
                                 <input  {...register("name")}
                                     value={user.displayName}
                                     placeholder="Name"
-                                    className='p-2 m-1' required />
+                                    className='p-2 m-1 w-100' required />
                                 <br />
 
                                 <input  {...register("email")}
                                     value={user.email}
                                     placeholder="email"
-                                    className='p-2 m-1' />
+                                    className='p-2 m-1 w-100' />
                                 <br />
 
                                 <input  {...register("product")}
                                     value={product.name}
                                     placeholder="tour-place"
-                                    className='p-2 m-1' />
+                                    className='p-2 m-1 w-100' />
 
                                 <br />
 
                                 <input  {...register("address")}
-                                    placeholder="Your address"
-                                    className='p-2 m-1' required
+                                    placeholder="Present Address"
+                                    className='p-2 m-1 w-100' required
                                 />
                                 <br />
                                 <input  {...register("phone")}
                                     placeholder="Phone number"
-                                    className='p-2 m-1' required
+                                    className='p-2 m-1 w-100' required
                                 />
 
                                 <br />
                                 <input  {...register("date")}
                                     type='date'
                                     placeholder="Date"
-                                    className='p-2 m-1' required
+                                    className='p-2 m-1 w-100' required
                                 />
 
                                 <br />
 
-                                <input type="submit" className='btn btn-danger w-50 mt-2' />
+                                <input type="submit" className='btn btn-primary w-100 mt-2 me-o' />
 
                             </form> : <div></div>)}
                     </div>
@@ -91,10 +91,10 @@ const ProductBook = () => {
                     <div>
                         {products.map(product => product._id == id ?
 
-                            <div className="card mx-auto mb-3 w-50 mt-5 border-0">
+                            <div className="card mx-auto mb-3 w-100 rounded-0">
                                 <img src={product.img} className="img-fluid" alt="..." />
                                 <div className="card-body">
-                                    <p className="card-text"><strong>More Details:</strong> {product.description}</p>
+                                    <p className="card-text">{product.description}</p>
                                 </div>
                             </div>
 

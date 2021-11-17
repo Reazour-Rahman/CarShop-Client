@@ -47,7 +47,7 @@ const AddProduct = () => {
                         />
 
                         <br />
-                        <input type="submit" className='btn btn-primary p-2 px-5 mt-2' />
+                        <input type="submit" className='btn btn-primary p-2 px-5 mt-2 rounded-0' />
 
                     </form>
                 </div>
